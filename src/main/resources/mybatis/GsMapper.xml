@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hexudong.mapper.GsMapper">
+
+	
+	<insert id="add" useGeneratedKeys="true" keyColumn="id" keyProperty="id">
+	
+		insert into gs (id,gjz,ms,gsname,cp,address,zb,clsj,njsj,nzzt,bz) values(#{id},#{gjz},#{ms},#{gsname},#{cp},#{address},#{zb},#{clsj},#{njsj},#{nzzt},#{bz})
+		
+	</insert>
+
+
+	<select id="getList" resultType="com.hexudong.entity.GS">
+		select * from gs
+		<where>
+			<if test="id!=null and id!=''">
+				and id =${id}
+			</if>
+			<if test="gjz!=null and gjz!=''">
+				and gjz =${gjz}
+			</if>
+			<if test="ms!=null and ms !=''">
+				and ms =${ms}
+			</if>
+			<if test="gsname!=null and gsname !=''">
+				and gsname =${gsname}
+			</if>
+			<if test="cp!=null and cp !=''">
+				and cp =${cp}
+			</if>
+			<if test="address!=null and address !=''">
+				and address =${address}
+			</if>
+			<if test="zb!=null and zb !=''">
+				and zb =${zb}
+			</if>
+			<if test="clsj!=null and clsj !=''">
+				and clsj =${clsj}
+			</if>
+			<if test="njsj!=null and njsj !=''">
+				and njsj =${njsj}
+			</if>
+			<if test="njrq1!=null and njrq1 !=''">
+				and njrq1 =${njrq1}
+			</if>
+			<if test="njrq2!=null and njrq2 !=''">
+				and njrq2 =${njrq2}
+			</if>
+		</where>
+	</select>
+
+</mapper>
