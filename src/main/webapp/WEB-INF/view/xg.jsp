@@ -20,45 +20,22 @@
 </head>
 <body>
 	
-	<div class="table-responsive-xl">
-	  <table class="table">
-			<tr>
-				<td>#</td>
-				<td>关键字</td>
-				<td>描述</td>
-				<td>公司名字</td>
-				<td>产品</td>
-				<td>地址</td>
-				<td>资本</td>
-				<td>成立时间</td>
-				<td>年检时间</td>
-				<td>年检状态</td>
-				<td>备注</td>
-				<td>
+				#:<input type="text" value="${gs.id}"><br>
+				关键字:<input type="text" value="${gs.gjz}"><br>
+				描述:<input type="text" value="${gs.ms}"><br>
+				公司名字:<input type="text" value="${gs.gsname}"><br>
+				产品:<input type="text" value="${gs.cp}"><br>
+				地址:<input type="text" value="${gs.address}"><br>
+				资本<input type="text" value="${gs.zb}"><br>
+				成立时间<input type="text" value="${gs.clsj}"><br>
+				年检时间<input type="text" value="${gs.njsj}"><br>
 				
-				</td>
-			</tr>	  	
-			<c:forEach items="${list}" var="f">
-			<tr>
-				<td>${f.id}</td>
-				<td>${f.gjz}</td>
-				<td>${f.ms}</td>
-				<td>${f.gsname}</td>
-				<td>${f.cp}</td>
-				<td>${f.address}</td>
-				<td>${f.zb}</td>
-				<td>${f.clsj}</td>
-				<td>${f.njsj}</td>
-				<td>
-					<c:if test="${f.nzzt==0}">通过</c:if>
-					<c:if test="${f.nzzt==1}">未通过</c:if>
-					<c:if test="${f.nzzt==2}">待定</c:if>
-				</td>
-				<td>${f.bz}</td>
-			</tr>
-			</c:forEach>
-	  </table>
-</div>
+				年检状态<input type="text" value="${gs.nzzt}">	
+						<c:if test="${f.nzzt==0}">通过</c:if>
+						<c:if test="${f.nzzt==1}">未通过</c:if>
+						<c:if test="${f.nzzt==2}">待定</c:if><br>
+				备注<input type="text" value="${gs.bz}"><br>
+			<a href="list">首页</a>
 	
 </body>
 </html>

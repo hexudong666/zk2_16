@@ -25,6 +25,10 @@ public class GsServiceImpl implements GsService {
 	public List<GS> getList(Vo vo) {
 		return mapper.getList(vo);
 	}
-	
+	@Override
+	public GS getGsByid(int id) {
+		
+		return mapper.getGsByid(id);
+	}
 	
 }

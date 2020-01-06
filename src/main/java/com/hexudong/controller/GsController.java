@@ -2,8 +2,6 @@ package com.hexudong.controller;
 
 import java.util.List;
 
-import javax.validation.Valid;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -47,7 +45,9 @@ public class GsController {
 	    * @throws
 	 */
 	@RequestMapping("xg")
-	private String xg(int id) {
+	private String xg(int id,Model model) {
+		GS gs = service.getGsByid(id);
+		model.addAttribute("gs", gs);
 		return "xg";
 	}
 	

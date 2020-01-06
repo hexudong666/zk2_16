@@ -11,4 +11,6 @@ public interface GsService {
 
 	List<GS> getList(Vo vo);
 
+	GS getGsByid(int id);
+
 }
