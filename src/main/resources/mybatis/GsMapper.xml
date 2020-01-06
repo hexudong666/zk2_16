@@ -11,7 +11,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		
 	</insert>
 
-
+<!-- 查询条件 -->
 	<select id="getList" resultType="com.hexudong.entity.GS">
 		select * from gs
 		<where>

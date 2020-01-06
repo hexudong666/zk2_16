@@ -19,7 +19,17 @@ public class GsController {
 
 	@Autowired
 	GsService service;
-	
+	/**
+	 * 
+	    * @Title: getList
+	    * @Description: 列表
+	    * @param @param vo
+	    * @param @param model
+	    * @param @param pageNum
+	    * @param @return    参数
+	    * @return String    返回类型
+	    * @throws
+	 */
 	@RequestMapping("list")
 	private String getList(Vo vo,Model model,@RequestParam(defaultValue="1")int pageNum) {
 		PageHelper.startPage(pageNum, 3);
